@@ -7,6 +7,7 @@ app.controller('AuthCtrl', ['$scope', '$state', 'auth', function($scope, $state,
     });
   };
 
+
   $scope.logIn = function(){
     auth.logIn($scope.user).error(function(error){
       $scope.error = error;

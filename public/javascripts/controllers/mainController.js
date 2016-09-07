@@ -1,4 +1,4 @@
-app.controller('MainCtrl', ['$scope', 'posts', function($scope, posts){
+app.controller('MainCtrl', ['$scope', 'posts', 'auth', function($scope, posts, auth){
   $scope.posts = posts.posts;
 
   $scope.addPost = function() {
@@ -16,4 +16,7 @@ app.controller('MainCtrl', ['$scope', 'posts', function($scope, posts){
   $scope.incrementUpvotes = function(item) {
     posts.upvote(item);
   }
+
+  $scope.isLoggedIn = auth.isLoggedIn;
+
 }]);
