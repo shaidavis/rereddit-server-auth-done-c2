@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 
-mongoose.connect(process.env.MONGOLAB_MAUVE_URI || 'mongodb://localhost/rereddit');
+mongoose.connect(process.env."mongodb://heroku_43mth391:7r9bp705te29hs12crir9i1np2@ds019936.mlab.com:19936/heroku_43mth391" || 'mongodb://localhost/rereddit');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
