@@ -16,7 +16,7 @@
 
 {{log()}}
 
-<form ng-submit="addPost()">
+<form ng-submit="addPost()" ng-show="isLoggedIn()">
   <h3>Add a new post</h3>
 
   <div class="form-group">
