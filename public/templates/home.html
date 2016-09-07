@@ -1,15 +1,15 @@
 <div ng-repeat="post in posts | orderBy:'-upvotes'">
-  <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(post)"></span>
-  {{post.upvotes}}
+  <span class="glyphicon glyphicon-thumbs-up" style="cursor:pointer" ng-click="incrementUpvotes(post)"></span>
+  {{post.upvotes}} - 
   <span class="post-title">
     <a ng-show="post.link" href="{{post.link}}">
-      {{post.title}}
+      <strong>{{post.title}}</strong>
     </a>
     <span ng-hide="post.link">
-      {{post.title}}
+      <strong>{{post.title}}</strong>
     </span>
     <span>
-      <a href="#/posts/{{post._id}}">comments</a>
+      <a href="#/posts/{{post._id}}">- view comments</a>
     </span>
   </span>
 </div>

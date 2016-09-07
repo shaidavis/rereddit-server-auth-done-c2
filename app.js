@@ -7,10 +7,18 @@ mongoose.connect('mongodb://localhost/rereddit');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+
 var app = express();
+
+console.log("***SERVER IS RUNNING***")
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+
+app.use(express.static('public'));
+app.use(express.static('node_modules'));
+app.use(express.static('models'));
 
 app.use('/', routes);
 app.use('/users', users); 
